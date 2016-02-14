@@ -28,6 +28,12 @@ class ItemsController < ApplicationController
 
 	end
 
+	def destroy
+		@item = Itemm.find(paraams[:id])
+		@item.destroy
+		redirect_to items_url
+	end
+
 	private
 
 	def item_params
